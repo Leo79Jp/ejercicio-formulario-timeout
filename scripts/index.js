@@ -85,6 +85,8 @@ boton.addEventListener('click', (event) => {
             console.log("La contraseña no es válida.");
           }
           validarPassword();
+
+
           if (emailValido && passwordValido){
             const h1 = document.querySelector('h1')
             h1.innerText= " Bienvenido al sitio 😀 "
@@ -92,10 +94,8 @@ boton.addEventListener('click', (event) => {
 
           }else{
             document.querySelector("#error-container").style.display="block";
-            const divErrorContainer = document.querySelector('#error-container')
-            let small = document.createElement("small");
+            const small = document.querySelector('small')
             small.innerText= "Alguno de los datos ingresados son incorrectos"
-            divErrorContainer.appendChild(small);
           }
 
         }
